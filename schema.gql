@@ -1,0 +1,137 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Product {
+  _id: String
+  id: ID
+  productAuthor: String
+  productSKU: String
+
+  """productDescription"""
+  productDescription: String!
+
+  """productCurrency"""
+  productCurrency: String!
+
+  """productImageRatio"""
+  productImageRatio: String!
+
+  """productTags"""
+  productTags: [String!]!
+
+  """productFormat"""
+  productFormat: String!
+
+  """isPublished"""
+  isPublished: Boolean!
+
+  """isFeatured"""
+  isFeatured: Boolean!
+
+  """isAdded"""
+  isAdded: Boolean!
+
+  """ productQuantity"""
+  productQuantity: Float!
+
+  """productTitle"""
+  productTitle: String!
+
+  """productImageUrl"""
+  productImageUrl: String!
+
+  """productLanguage"""
+  productLanguage: String!
+
+  """categoryId"""
+  categoryId: Float
+
+  """productPrice"""
+  productPrice: Float!
+
+  """productPublishedDate"""
+  productPublishedDate: DateTime
+
+  """productPublishedDate"""
+  productUpdateDate: DateTime
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  hello: String!
+  getHello: String!
+  Book: [Product!]!
+  BookById(id: String!): Product!
+}
+
+type Mutation {
+  createProduct(createAssignmentInput: CreateProductInput!): Product!
+  updateProduct(id: String!, updateProductInput: CreateProductInput!): Product!
+  deleteBook(id: String!): Product!
+}
+
+input CreateProductInput {
+  _id: ID
+
+  """Example field (placeholder)"""
+  id: ID
+
+  """product Author"""
+  productAuthor: String
+
+  """product productSKU"""
+  productSKU: String
+
+  """productDescription"""
+  productDescription: String
+
+  """productCurrency"""
+  productCurrency: String
+
+  """productImageRatio"""
+  productImageRatio: String
+
+  """productTags"""
+  productTags: [String!]
+
+  """productFormat"""
+  productFormat: String
+
+  """isPublished"""
+  isPublished: Boolean
+
+  """isFeatured"""
+  isFeatured: Boolean
+
+  """isAdded"""
+  isAdded: Boolean
+
+  """ productQuantity"""
+  productQuantity: Float
+
+  """productTitle"""
+  productTitle: String
+
+  """productImageUrl"""
+  productImageUrl: String
+
+  """productLanguage"""
+  productLanguage: String
+
+  """categoryId"""
+  categoryId: Float
+
+  """productPrice"""
+  productPrice: Float
+
+  """productPublishedDate"""
+  productPublishedDate: DateTime
+
+  """productPublishedDate"""
+  productUpdateDate: DateTime
+}
