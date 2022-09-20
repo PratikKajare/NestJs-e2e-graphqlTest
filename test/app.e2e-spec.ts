@@ -21,4 +21,13 @@ describe('AppController (e2e)', () => {
       .expect(200)
       .expect('Hello World!');
   });
+  // it('/graphql (POST) sayHello', () => {
+  //   return request(app.getHttpServer())
+  //     .post('/graphql')
+  //     .send({ query: '{sayHello { hello }}' })
+  //     .expect(200)
+  //     .expect(({ body }) => {
+  //       expect(body.data.sayHello).toEqual({ hello: 'world' });
+  //     });
+  // });
 });
