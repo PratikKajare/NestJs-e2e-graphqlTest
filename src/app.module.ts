@@ -8,6 +8,7 @@ import { AppService } from './app.service';
 import { BooksModule } from './product/product.module';
 import { ConfigurationModule } from './config/config.module';
 import configuration from './config/configuration';
+// import * as Joi from 'joi';
 
 // const dbHost = ConfigService.get<string>('database').mongoDb;
 @Module({
@@ -17,6 +18,8 @@ import configuration from './config/configuration';
       envFilePath: `${process.cwd()}/.env`,
       isGlobal: true,
       load: [configuration],
+      ELASTIC_NODE: process.env.ELASTIC_NODE,
+      // ELASTIC_NODE:Joi.number()
     }),
     MongooseModule.forRoot(configuration().database.mongoDb),
     GraphQLModule.forRoot({
